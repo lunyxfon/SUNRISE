@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Галерея — SUNRISE</title>
+  <!-- ЗАМЕНИТЬ: описание страницы для поисковиков -->
+  <meta name="description" content="Фото студии SUNRISE: концерты, тренировки, backstage и команда.">
+  <meta name="theme-color" content="#0b0a0e">
+  <!-- Шрифты Google Fonts: Montserrat (заголовки) + Inter (текст) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== ШАПКА (одинаковая на всех страницах) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="SUNRISE — на главную">
+        <span class="logo__sun" aria-hidden="true"></span>SUNRISE
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span></button>
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="about.html">О студии</a></li>
+          <li><a class="nav__link" href="directions.html">Направления</a></li>
+          <li><a class="nav__link" href="gallery.html" aria-current="page">Галерея</a></li>
+          <li><a class="nav__link" href="prices.html">Цены и запись</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Заголовок страницы ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Галерея</p>
+        <h1 class="page-hero__title">Жизнь <span class="text-sunrise">студии</span></h1>
+        <p class="lead">Концерты, тренировки и то, что остаётся за кулисами. Нажмите на фото, чтобы открыть его крупно.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Фильтры по категориям (значение data-filter должно совпадать с data-cat у фото) -->
+        <div class="filters" role="group" aria-label="Фильтр по категориям">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
+          <button class="filter-btn" type="button" data-filter="concerts" aria-pressed="false">Концерты</button>
+          <button class="filter-btn" type="button" data-filter="training" aria-pressed="false">Тренировки</button>
+          <button class="filter-btn" type="button" data-filter="backstage" aria-pressed="false">Backstage</button>
+          <button class="filter-btn" type="button" data-filter="team" aria-pressed="false">Команда</button>
+        </div>
+
+        <!-- ЗАМЕНИТЬ: ваши фотографии.
+             Для каждого фото:
+               1) укажите категорию в data-cat: concerts / training / backstage / team;
+               2) вставьте внутрь .ph: <img src="images/gallery/01.jpg" alt="Описание" loading="lazy">
+                  (необязательно: data-full="images/gallery/01-big.jpg" — большое фото для лайтбокса);
+               3) поменяйте подпись в <figcaption>.
+             Чтобы добавить фото — скопируйте целиком блок <figure>...</figure>. -->
+        <div class="gallery">
+          <figure class="g-item" data-cat="concerts">
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 01</strong><span>images/gallery/01.jpg</span></div>
+            <figcaption><b>Отчётный концерт, финал</b><span>Концерты</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="training">
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 02</strong><span>images/gallery/02.jpg</span></div>
+            <figcaption><b>Breaking, вечерняя группа</b><span>Тренировки</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="backstage">
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 03</strong><span>images/gallery/03.jpg</span></div>
+            <figcaption><b>Перед выходом на сцену</b><span>Backstage</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="team">
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 04</strong><span>images/gallery/04.jpg</span></div>
+            <figcaption><b>Команда SUNRISE</b><span>Команда</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="concerts">
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 05</strong><span>images/gallery/05.jpg</span></div>
+            <figcaption><b>Hip-Hop, постановка</b><span>Концерты</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="training">
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 06</strong><span>images/gallery/06.jpg</span></div>
+            <figcaption><b>Разминка Kids</b><span>Тренировки</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="backstage">
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 07</strong><span>images/gallery/07.jpg</span></div>
+            <figcaption><b>Грим и костюмы</b><span>Backstage</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="concerts">
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 08</strong><span>images/gallery/08.jpg</span></div>
+            <figcaption><b>Dancehall на фестивале</b><span>Концерты</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="team">
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 09</strong><span>images/gallery/09.jpg</span></div>
+            <figcaption><b>Преподаватели студии</b><span>Команда</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="training">
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 10</strong><span>images/gallery/10.jpg</span></div>
+            <figcaption><b>Popping, изоляции</b><span>Тренировки</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="concerts">
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 11</strong><span>images/gallery/11.jpg</span></div>
+            <figcaption><b>Баттл 2×2</b><span>Концерты</span></figcaption>
+          </figure>
+          <figure class="g-item" data-cat="backstage">
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 12</strong><span>images/gallery/12.jpg</span></div>
+            <figcaption><b>Репетиция в зале</b><span>Backstage</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Лайтбокс (управляется из script.js) ===== -->
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото" hidden>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Предыдущее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+      <div class="lightbox__stage">
+        <div class="lightbox__media"></div>
+        <div class="lightbox__caption"><span class="lightbox__text"></span><span class="lightbox__count"></span></div>
+      </div>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Следующее фото"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    </div>
+  </main>
+
+  <!-- ===== ПОДВАЛ (одинаковый на всех страницах) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="logo" href="index.html"><span class="logo__sun" aria-hidden="true"></span>SUNRISE</a>
+          <!-- ЗАМЕНИТЬ: короткое описание студии -->
+          <p>Студия уличного танца. Hip-Hop, Breaking, Popping, Locking, Dancehall и Contemporary для взрослых и детей.</p>
+        </div>
+        <div>
+          <p class="footer__title">Разделы</p>
+          <ul class="footer__list">
+            <li><a href="about.html">О студии</a></li>
+            <li><a href="directions.html">Направления и расписание</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="prices.html">Цены и запись</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Контакты</p>
+          <ul class="footer__list">
+            <!-- Адреса студий. ЗАМЕНИТЬ: телефон и почта -->
+            <li>ул. Салтыкова-Щедрина 58/1</li>
+            <li>ул. Мельникайте 72к1</li>
+            <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+            <li><a href="mailto:hello@sunrise-dance.ru">hello@sunrise-dance.ru</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Мы в соцсетях</p>
+          <!-- ЗАМЕНИТЬ: ссылки на ваши соцсети -->
+          <div class="socials">
+            <a class="social" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.8zM8.9 14l8.7-5.5c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.3z"/></svg></a>
+            <a class="social" href="https://vk.com/ВАША_ГРУППА" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.3h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9c-.5 2.7-2.5 4.7-3.9 5.5 1.4.7 3.7 2.4 4.6 5.7h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+            <a class="social" href="https://instagram.com/ВАШ_АККАУНТ" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a class="social" href="https://youtube.com/@ВАШ_КАНАЛ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12c0 1.3.1 2.6.4 3.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> SUNRISE. Все права защищены.</span>
+        <span>Сделано с любовью к танцу</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

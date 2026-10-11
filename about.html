@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>О студии — SUNRISE</title>
+  <!-- ЗАМЕНИТЬ: описание страницы для поисковиков -->
+  <meta name="description" content="История студии уличного танца SUNRISE, преподаватели, отзывы учеников и группы по уровням.">
+  <meta name="theme-color" content="#0b0a0e">
+  <!-- Шрифты Google Fonts: Montserrat (заголовки) + Inter (текст) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== ШАПКА (одинаковая на всех страницах) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="SUNRISE — на главную">
+        <span class="logo__sun" aria-hidden="true"></span>SUNRISE
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span></button>
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Главная</a></li>
+          <li><a class="nav__link" href="about.html" aria-current="page">О студии</a></li>
+          <li><a class="nav__link" href="directions.html">Направления</a></li>
+          <li><a class="nav__link" href="gallery.html">Галерея</a></li>
+          <li><a class="nav__link" href="prices.html">Цены и запись</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Заголовок страницы ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">О студии</p>
+        <h1 class="page-hero__title">Мы — <span class="text-sunrise">SUNRISE</span></h1>
+        <p class="lead">Команда, зал и комьюнити, где уличный танец живёт каждый день.</p>
+      </div>
+    </section>
+
+    <!-- ===== История и миссия ===== -->
+    <section class="section">
+      <div class="container story">
+        <div class="story__text reveal">
+          <!-- ЗАМЕНИТЬ: история студии -->
+          <p>SUNRISE появилась в 2018 году, когда трое танцоров арендовали небольшой зал по вечерам и начали тренировать друзей. Сейчас это студия с двумя залами и шестью направлениями.</p>
+          <p>Мы выросли из баттлов и уличных джемов, поэтому учим не только связкам, но и культуре: музыке, истории стилей, умению фристайлить и держаться в кругу.</p>
+          <!-- ЗАМЕНИТЬ: миссия -->
+          <p><strong class="text-sunrise">Наша миссия</strong> — дать каждому, кто пришёл в зал, место, где можно расти в танце в своём темпе и найти свою команду.</p>
+        </div>
+
+        <div class="reveal">
+          <!-- ЗАМЕНИТЬ: цифры студии -->
+          <div class="facts">
+            <div class="fact"><b class="text-sunrise">2018</b><span>год основания</span></div>
+            <div class="fact"><b>6</b><span>направлений</span></div>
+            <div class="fact"><b>350+</b><span>учеников</span></div>
+            <div class="fact"><b>40+</b><span>выступлений и баттлов</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Ценности ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Ценности</p>
+          <h2 class="h2">Во что мы верим</h2>
+        </div>
+        <!-- ЗАМЕНИТЬ: ваши ценности -->
+        <div class="values reveal">
+          <div class="value">
+            <h3 class="h3">Peace, Love, Unity</h3>
+            <p>Принципы хип-хоп культуры: в зале уважают каждого, независимо от уровня и возраста.</p>
+          </div>
+          <div class="value">
+            <h3 class="h3">Фундамент</h3>
+            <p>Сначала грув, база и музыкальность, потом трюки. Так танец остаётся с человеком надолго.</p>
+          </div>
+          <div class="value">
+            <h3 class="h3">Свой стиль</h3>
+            <p>Мы не делаем копии тренера. Задача преподавателя — помочь найти собственный почерк.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Преподаватели ===== -->
+    <section class="section" id="teachers">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Команда</p>
+          <h2 class="h2">Наши преподаватели</h2>
+        </div>
+
+        <!-- ЗАМЕНИТЬ: фото, имя, стиль и био каждого преподавателя.
+             Фото: вставьте <img src="images/teacher-1.jpg" alt="Имя"> внутрь .ph -->
+        <div class="cards">
+          <article class="card teacher reveal">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>Фото преподавателя</strong><span>images/teacher-1.jpg · 4:5</span></div>
+            <span class="chip">Hip-Hop</span>
+            <h3 class="teacher__name">Алексей «Rize» Иванов</h3>
+            <p>Танцует 12 лет, финалист всероссийских баттлов. Ставит хореографию для отчётных концертов.</p>
+          </article>
+          <article class="card teacher reveal">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>Фото преподавателя</strong><span>images/teacher-2.jpg · 4:5</span></div>
+            <span class="chip">Breaking</span>
+            <h3 class="teacher__name">Дмитрий «Flow» Петров</h3>
+            <p>Би-бой с 2010 года, судья региональных соревнований. Ведёт взрослые и детские группы.</p>
+          </article>
+          <article class="card teacher reveal">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>Фото преподавателя</strong><span>images/teacher-3.jpg · 4:5</span></div>
+            <span class="chip">Popping · Locking</span>
+            <h3 class="teacher__name">Мария «Lock» Сидорова</h3>
+            <p>Специалист по фанк-стилям. Учит изоляциям, музыкальности и работе с характером.</p>
+          </article>
+          <article class="card teacher reveal">
+            <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><strong>Фото преподавателя</strong><span>images/teacher-4.jpg · 4:5</span></div>
+            <span class="chip">Dancehall · Contemporary</span>
+            <h3 class="teacher__name">Анна «Sun» Кузнецова</h3>
+            <p>Стажировалась на Ямайке, преподаёт dancehall и contemporary. Отвечает за женские группы.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Отзывы ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Отзывы</p>
+          <h2 class="h2">Что говорят ученики</h2>
+        </div>
+
+        <!-- ЗАМЕНИТЬ: реальные отзывы. Фото ученика: <img src="images/review-1.jpg" alt="Имя"> внутрь .ph--round -->
+        <div class="cards">
+          <article class="card review reveal">
+            <div class="review__head">
+              <div class="ph ph--round"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+              <div><p class="review__name">Екатерина</p><p class="review__meta">Hip-Hop, 1 год в студии</p></div>
+            </div>
+            <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg></div>
+            <blockquote>Пришла в 29 лет с нулевым опытом и боялась, что буду самой неуклюжей. Через полгода выступила на отчётнике.</blockquote>
+          </article>
+          <article class="card review reveal">
+            <div class="review__head">
+              <div class="ph ph--round"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+              <div><p class="review__name">Игорь</p><p class="review__meta">Breaking, 2 года</p></div>
+            </div>
+            <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg></div>
+            <blockquote>Тренеры объясняют технику по шагам, и травм за два года ни одной. Наконец-то получился windmill.</blockquote>
+          </article>
+          <article class="card review reveal">
+            <div class="review__head">
+              <div class="ph ph--round"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+              <div><p class="review__name">Ольга, мама Вари</p><p class="review__meta">Kids, 8 лет</p></div>
+            </div>
+            <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg></div>
+            <blockquote>Дочь бежит на тренировки и дома показывает новые связки. Нравится, что детей учат держаться на сцене.</blockquote>
+          </article>
+          <article class="card review reveal">
+            <div class="review__head">
+              <div class="ph ph--round"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+              <div><p class="review__name">Максим</p><p class="review__meta">Popping, 8 месяцев</p></div>
+            </div>
+            <div class="stars" aria-label="Оценка 5 из 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.8 6.4.9-4.6 4.5 1.1 6.4L12 17.4l-5.7 3 1.1-6.4-4.6-4.5 6.4-.9z"/></svg></div>
+            <blockquote>Атмосфера как в команде, а не в фитнес-клубе. После занятий остаёмся фристайлить в кругу.</blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Группы ===== -->
+    <section class="section" id="groups">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Группы</p>
+          <h2 class="h2">Найдите свой уровень</h2>
+          <p class="lead">Не уверены, куда идти? На пробном занятии тренер подскажет подходящую группу.</p>
+        </div>
+
+        <!-- ЗАМЕНИТЬ: описание групп -->
+        <div class="cards">
+          <article class="card group reveal">
+            <span class="chip">0–6 месяцев</span>
+            <h3 class="group__level">Начинающие</h3>
+            <p>Для тех, кто никогда не танцевал или давно не занимался.</p>
+            <ul>
+              <li>базовые шаги и грув</li>
+              <li>счёт и работа с музыкой</li>
+              <li>простые связки</li>
+            </ul>
+          </article>
+          <article class="card group reveal">
+            <span class="chip chip--solid">от 6 месяцев</span>
+            <h3 class="group__level">Продолжающие</h3>
+            <p>Уверенная база, хочется больше хореографии и фристайла.</p>
+            <ul>
+              <li>сложные связки и переходы</li>
+              <li>основы фристайла</li>
+              <li>подготовка к концертам</li>
+            </ul>
+          </article>
+          <article class="card group reveal">
+            <span class="chip">от 2 лет</span>
+            <h3 class="group__level">Продвинутые</h3>
+            <p>Для танцоров, которые выступают и участвуют в баттлах.</p>
+            <ul>
+              <li>постановки и командная работа</li>
+              <li>подготовка к баттлам</li>
+              <li>развитие своего стиля</li>
+            </ul>
+          </article>
+          <article class="card group reveal">
+            <span class="chip chip--solid">6–14 лет</span>
+            <h3 class="group__level">Kids</h3>
+            <p>Детские группы по возрастам: 6–9 и 10–14 лет.</p>
+            <ul>
+              <li>координация и музыкальность</li>
+              <li>игровой формат</li>
+              <li>выступления на концертах</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ПОДВАЛ (одинаковый на всех страницах) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="logo" href="index.html"><span class="logo__sun" aria-hidden="true"></span>SUNRISE</a>
+          <!-- ЗАМЕНИТЬ: короткое описание студии -->
+          <p>Студия уличного танца. Hip-Hop, Breaking, Popping, Locking, Dancehall и Contemporary для взрослых и детей.</p>
+        </div>
+        <div>
+          <p class="footer__title">Разделы</p>
+          <ul class="footer__list">
+            <li><a href="about.html">О студии</a></li>
+            <li><a href="directions.html">Направления и расписание</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="prices.html">Цены и запись</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Контакты</p>
+          <ul class="footer__list">
+            <!-- Адреса студий. ЗАМЕНИТЬ: телефон и почта -->
+            <li>ул. Салтыкова-Щедрина 58/1</li>
+            <li>ул. Мельникайте 72к1</li>
+            <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+            <li><a href="mailto:hello@sunrise-dance.ru">hello@sunrise-dance.ru</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Мы в соцсетях</p>
+          <!-- ЗАМЕНИТЬ: ссылки на ваши соцсети -->
+          <div class="socials">
+            <a class="social" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.8zM8.9 14l8.7-5.5c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.3z"/></svg></a>
+            <a class="social" href="https://vk.com/ВАША_ГРУППА" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.3h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9c-.5 2.7-2.5 4.7-3.9 5.5 1.4.7 3.7 2.4 4.6 5.7h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+            <a class="social" href="https://instagram.com/ВАШ_АККАУНТ" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a class="social" href="https://youtube.com/@ВАШ_КАНАЛ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12c0 1.3.1 2.6.4 3.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1c.3-1.2.4-2.5.4-3.8s-.1-2.6-.4-3.8zM10 15V9l5.2 3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> SUNRISE. Все права защищены.</span>
+        <span>Сделано с любовью к танцу</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

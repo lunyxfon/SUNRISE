@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SUNRISE — студия уличного танца</title>
+  <!-- ЗАМЕНИТЬ: описание страницы для поисковиков -->
+  <meta name="description" content="SUNRISE — студия уличного танца: Hip-Hop, Breaking, Popping, Locking, Dancehall, Contemporary. Запишитесь на пробное занятие.">
+  <meta name="theme-color" content="#0b0a0e">
+  <!-- Шрифты Google Fonts: Montserrat (заголовки) + Inter (текст) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== ШАПКА (одинаковая на всех страницах) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="SUNRISE — на главную">
+        <span class="logo__sun" aria-hidden="true"></span>SUNRISE
+      </a>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span></button>
+      <nav class="nav" id="main-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="nav__link" href="about.html">О студии</a></li>
+          <li><a class="nav__link" href="directions.html">Направления</a></li>
+          <li><a class="nav__link" href="gallery.html">Галерея</a></li>
+          <li><a class="nav__link" href="prices.html">Цены и запись</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO: логотип, заголовок, фото ===== -->
+    <section class="hero">
+      <div class="container">
+        <!-- Крупный логотип. ЗАМЕНИТЬ при желании на <img src="images/logo.svg" alt="SUNRISE"> -->
+        <span class="hero__logo" aria-hidden="true">Sunrise Street</span>
+
+        <div class="hero__grid">
+          <div class="hero__intro">
+            <div>
+              <p class="eyebrow">Студия уличного танца</p>
+              <h1 class="hero__title">Начни танцевать <span class="text-sunrise">вместе с&nbsp;нами</span></h1>
+              <!-- ЗАМЕНИТЬ: короткий подзаголовок -->
+              <p class="hero__text">Научим танцевать с нуля. Танцы для начинающих и продолжающих. Отчетные концерты, выступление на конкурсах и чемпионатах.</p>
+            </div>
+
+            <!-- Адреса студий. ЗАМЕНИТЬ при необходимости.
+                 Ещё один адрес — скопируйте блок <li>...</li> целиком. -->
+            <ul class="hero__addresses" aria-label="Адреса студий">
+              <li class="address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                <b class="address__street">ул. Салтыкова-Щедрина 58/1</b>
+              </li>
+              <li class="address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                <b class="address__street">ул. Мельникайте 72к1</b>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero__media">
+            <!-- ЗАМЕНИТЬ: главное фото студии.
+                 Вставьте внутрь блока .ph строку:
+                 <img src="images/hero.jpg" alt="Танцоры SUNRISE на сцене">
+                 (подпись и иконка останутся под фото, их можно удалить) -->
+            <div class="ph">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg>
+             <!-- <strong>Главное фото</strong> --> 
+             <!-- <span>images/hero.jpg · горизонтальное, от 1600 px по ширине</span> --> 
+            <img src="img/Главное фото.jpg" alt="Танцоры SUNRISE на сцене">
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Плашка записи на пробное занятие -->
+        <div class="trial">
+          <p class="trial__label">
+            Записаться на пробное занятие
+            <small>Подберём группу по уровню и возрасту.</small>
+          </p>
+          <div class="btn-row">
+            <!-- ЗАМЕНИТЬ: ссылка на ваш Telegram-канал / бота / форму -->
+            <a class="btn btn--primary" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener">
+              Записаться <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.8zM8.9 14l8.7-5.5c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.3z"/></svg>
+            </a>
+            <a class="btn btn--outline" href="directions.html">
+              Выбрать направление <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Бегущая строка с направлениями ===== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Hip-Hop</span><span>HIGH-HEELS</span><span>GIRLY HIP-HOP</span><span>EXPERIMENTAL</span><span>Dancehall</span><span>CHOREO</span><span>DANCEMIX</span><span>K-POP COVER DANCE</span><span>ДЕТСКИЕ НАПРАВЛЕНИЯ</span>
+               <span>Hip-Hop</span><span>HIGH-HEELS</span><span>GIRLY HIP-HOP</span><span>EXPERIMENTAL</span><span>Dancehall</span><span>CHOREO</span><span>DANCEMIX</span><span>K-POP COVER DANCE</span><span>ДЕТСКИЕ НАПРАВЛЕНИЯ</span>
+
+      </div>
+    </div>
+
+    <!-- ===== Преимущества студии ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          
+          <h2 class="h2">Зал, где растут танцоры</h2>
+        </div>
+
+        <!-- ЗАМЕНИТЬ: тексты преимуществ -->
+        <div class="features reveal">
+          <article class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14.5c2.4 0 4 1.5 4.6 4"/></svg></div>
+            <h3 class="h3">Практикующие тренеры</h3>
+            <p>Преподаватели действующие танцоры, выступают на конкурсах,фестивалях и баттлах. Развиваются на мастер-классах у топовых преподаватейлей России и Мира.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3 class="h3">Старт с нуля</h3>
+            <p>В студии имется группы для тех, кто никогда не танцевал и  только начинает свой путь. Занятия проходят в комфортном ритме. Изучаем базовые элемнты,работаем над координацией, чувством ритма и узучаем хореографии. </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11"/><path d="M9 20v-6h6v6"/></svg></div>
+            <h3 class="h3">Выступления</h3>
+            <p>Отчётные концерты,квартирники, конкурсы, чемпионаты и активная жизнь студии.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+            <h3 class="h3">Удобное расписание</h3>
+           <!-- <p>Утренние, вечерние и выходные группы. Пропущенное занятие можно отработать в другой группе.</p> -->
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Финальный призыв ===== -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="cta reveal">
+          <h2 class="cta__title">Записаться на пробное занятие</h2>
+          <p>Начни танцевать вместе с нами</p>
+          <!-- ЗАМЕНИТЬ: ссылка на Telegram -->
+          <a class="btn btn--dark" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener">Записаться <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== ПОДВАЛ (одинаковый на всех страницах) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a class="logo" href="index.html"><span class="logo__sun" aria-hidden="true"></span>SUNRISE</a>
+          <!-- ЗАМЕНИТЬ: короткое описание студии -->
+          <p>Студия уличного танца.</p>
+        </div>
+        <div>
+          <p class="footer__title">Разделы</p>
+          <ul class="footer__list">
+            <li><a href="about.html">О студии</a></li>
+            <li><a href="directions.html">Направления и расписание</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="prices.html">Цены и запись</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Контакты</p>
+          <ul class="footer__list">
+            <!-- Адреса студий. ЗАМЕНИТЬ: телефон и почта -->
+            <li>ул. Салтыкова-Щедрина 58/1</li>
+            <li>ул. Мельникайте 72к1</li>
+            <li><a href="tel:+70000000000">+7 982 963 1772</a></li>
+            <li><a href="mailto:street.sunrise@mail.ru">street.sunrise@mail.ru</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__title">Мы в соцсетях</p>
+          <!-- ЗАМЕНИТЬ: ссылки на ваши соцсети -->
+          <div class="socials">
+            <a class="social" href="https://t.me/SUNRISE_LIVE" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.5-1.8zM8.9 14l8.7-5.5c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.3z"/></svg></a>
+            <a class="social" href="https://vk.com/sunrise_ra" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.8 17.5C6.6 17.5 3.1 13.3 3 6.3h3.1c.1 5.1 2.3 7.3 4.1 7.7V6.3h2.9v4.4c1.8-.2 3.6-2.2 4.3-4.4h2.9c-.5 2.7-2.5 4.7-3.9 5.5 1.4.7 3.7 2.4 4.6 5.7h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+            <a class="social" href="https://instagram.com/sunrise_tyumen" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> SUNRISE. Все права защищены.</span>
+        <span>Сделано с любовью к танцу</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
