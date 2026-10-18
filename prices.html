@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Стоимость и запись — SUNRISE</title>
+  <title>Стоимость и скидки — SUNRISE</title>
   <!-- ЗАМЕНИТЬ: описание страницы для поисковиков -->
   <meta name="description" content="Стоимость занятий в студии SUNRISE: разовое занятие, абонементы на 4, 8 и 12 занятий, индивидуальные тренировки, детские группы.">
   <meta name="theme-color" content="#0b0a0e">
@@ -27,7 +27,7 @@
           <li><a class="nav__link" href="about.html">О студии</a></li>
           <li><a class="nav__link" href="directions.html">Направления</a></li>
           <li><a class="nav__link" href="gallery.html">Галерея</a></li>
-          <li><a class="nav__link" href="prices.html" aria-current="page">Стоимость и запись</a></li>
+          <li><a class="nav__link" href="prices.html" aria-current="page">Стоимость и скидки</a></li>
         </ul>
       </nav>
     </div>
@@ -73,8 +73,8 @@
             <a class="btn btn--outline btn--block" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener">Записаться</a>
           </article>
 
-          <article class="card price-card price-card--hit reveal">
-            <span class="price-card__badge">Выбирают чаще</span>
+          <article class="card price-card reveal">
+            
             <h2 class="h3">Разовое занятие</h2>
             <p class="price-card__value">700<small>₽</small></p>
             <p class="price-card__per">одно занятие 60 минут</p>
@@ -82,7 +82,7 @@
               <li>Если не можете посещать тренировки регулярно</li>
               
             </ul>
-            <a class="btn btn--primary btn--block" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener">Записаться</a>
+            <a class="btn btn--outline btn--block" href="https://t.me/ВАШ_КАНАЛ" target="_blank" rel="noopener">Записаться</a>
           </article>
 
          
@@ -93,30 +93,71 @@
         </div>
       </div>
     </section>
-    <section class="page-hero">
+        <!-- ===== Программа лояльности ===== -->
+    <section class="section loyalty" id="loyalty">
       <div class="container">
-        
-        <h1 class="page-hero__title">Выберите <span class="text-sunrise">свой формат</span></h1>
-        <p class="lead">Абонемент действует на одно направление. Необязательно сразу приобретать абонемент, запишись на пробное занятие и выбери свое направление.</p>
+        <div class="section-head reveal">
+      
+          <h2 class="h2">Программа лояльности</h2>
+        </div>
+
+        <div class="loyalty__grid">
+          <!-- Скидка за друзей -->
+          <article class="card loyalty-card loyalty-card--friends reveal">
+            <h3 class="h3">Приведи друга</h3>
+            <p>Приведи на тренировку друга и получи скидку на свой следующий абонемент.</p>
+            <ul class="loyalty__tiers">
+              <li class="tier"><span class="tier__label">1 друг</span><b class="discount">15%</b></li>
+              <li class="tier"><span class="tier__label">2 друга</span><b class="discount">25%</b></li>
+              <li class="tier"><span class="tier__label">3 друга</span><b class="discount">50%</b></li>
+              <li class="tier"><span class="tier__label">4 друга</span><b class="discount">100%</b></li>
+            </ul>
+            <p class="loyalty__note">Скидка начисляется после того, как друг приобрёл абонемент на месяц занятий. Каждый месяц количество приведённых друзей обнуляется.</p>
+          </article>
+
+          <!-- Скидка за несколько групп -->
+          <article class="card loyalty-card loyalty-card--groups reveal">
+            <h3 class="h3">Несколько групп</h3>
+            <p>Для тех, кто занимается в 2–3 и более группах.</p>
+            <div class="loyalty__big">
+              <b class="discount discount--xl">10%</b>
+              <span>на последующую группу</span>
+            </div>
+          </article>
+
+          <!-- Семейная скидка -->
+          <article class="card loyalty-card loyalty-card--family reveal">
+            <h3 class="h3">Семейная скидка</h3>
+            <p>Распространяется на детей и родителей.</p>
+            <ul class="loyalty__tiers">
+              <li class="tier"><span class="tier__label">2 человека</span><b class="discount">10%</b></li>
+              <li class="tier"><span class="tier__label">3 человека</span><b class="discount">15%</b></li>
+              <li class="tier"><span class="tier__label">4 человека</span><b class="discount">20%</b></li>
+              <li class="tier"><span class="tier__label">5 человек</span><b class="discount">25%</b></li>
+            </ul>
+            <p class="loyalty__note">Скидка действует на покупку со второго абонемента.</p>
+          </article>
+        </div>
       </div>
     </section>
+   
 
     <!-- ===== Как записаться ===== -->
     <section class="section section--alt">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Запись</p>
+      
           <h2 class="h2">Как записаться</h2>
         </div>
         <!-- ЗАМЕНИТЬ: шаги записи под ваш процесс -->
         <ol class="steps reveal">
           <li class="step">
             <h3 class="h3">Напишите нам</h3>
-            <p>Откройте наш Telegram и отправьте заявку: имя, возраст и интересное направление.</p>
+            <p>Нажмите кнопку записаться и отправьте заявку: имя, возраст, номер телефонаы.</p>
           </li>
           <li class="step">
             <h3 class="h3">Выберите время</h3>
-            <p>Администратор предложит группу по уровню и удобное время из расписания.</p>
+            <p>Администратор напишет вам в телеграмме или позвонит по номеру телефона, предложит группу по уровню и удобное время из расписания.</p>
           </li>
           <li class="step">
             <h3 class="h3">Приходите на пробное</h3>
@@ -124,7 +165,7 @@
           </li>
           <li class="step">
             <h3 class="h3">Оформите абонемент</h3>
-            <p>Понравилось — оплатите абонемент на ресепшене или по ссылке, и стоимость пробного вычтем.</p>
+            <p>Понравилось — оплатите абонемент на ресепшене.</p>
           </li>
         </ol>
       </div>
@@ -134,7 +175,7 @@
     <section class="section" id="contacts">
       <div class="container">
         <div class="section-head reveal">
-          <p class="eyebrow">Контакты</p>
+       
           <h2 class="h2">Как нас найти</h2>
         </div>
         <div class="contacts reveal">
