@@ -16,6 +16,7 @@
   --c-muted: #a39bb1;       /* второстепенный текст */
   --c-accent: #9b4dff;      /* фиолетовый — единственный акцентный цвет */
   --c-on-accent: #ffffff;   /* текст на фиолетовых кнопках и плашках */
+  --c-error: #ff6b6b;       /* текст ошибок в форме записи */
 
   /* Шрифты */
   --f-display: "Montserrat", "Arial Black", "Helvetica Neue", Arial, sans-serif;
@@ -1016,3 +1017,115 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   .reveal.is-pending { opacity: 1; transform: none; }
 }
+
+
+/* ---------- 17. ФОРМА ЗАПИСИ (всплывающее окно) ----------
+   Окно создаётся в script.js и открывается по кнопкам «Записаться». */
+.signup {
+  width: min(100% - 2 * var(--gutter), 480px);
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: clamp(24px, 4vw, 36px);
+  background: var(--c-surface);
+  color: var(--c-text);
+  border: 1px solid var(--c-line);
+  border-top: 4px solid var(--c-accent);
+  border-radius: var(--radius);
+  overflow-y: auto;
+}
+.signup::backdrop {
+  background: color-mix(in srgb, var(--c-bg) 85%, transparent);
+  backdrop-filter: blur(6px);
+}
+.signup[open] { animation: rise .45s var(--ease) both; }
+
+.signup__close {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 40px; height: 40px;
+  display: grid; place-items: center;
+  background: transparent;
+  border: 1px solid var(--c-line);
+  border-radius: 50%;
+  color: var(--c-text);
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.signup__close:hover { background: var(--c-accent); border-color: var(--c-accent); color: var(--c-on-accent); }
+.signup__close svg { width: 18px; height: 18px; }
+
+.signup__form, .signup__done { display: grid; gap: 18px; }
+.signup [hidden] { display: none; } /* скрытые части окна (экран «Готово» и т. п.) */
+.signup__title {
+  font-size: var(--fs-xl);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: -8px;
+  padding-right: 40px; /* место под крестик */
+}
+.signup__context {
+  margin-top: -8px;
+  color: var(--c-accent);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+/* Поля формы */
+.field { display: grid; gap: 8px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.field__label {
+  padding: 0;
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-muted);
+}
+.field__input {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  background: var(--c-bg);
+  color: var(--c-text);
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  font: inherit;
+  transition: border-color .2s, box-shadow .2s;
+}
+.field__input::placeholder { color: color-mix(in srgb, var(--c-muted) 60%, transparent); }
+.field__input:hover { border-color: var(--c-muted); }
+.field__input:focus { outline: none; border-color: var(--c-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-accent) 30%, transparent); }
+.field__error { min-height: 0; font-size: var(--fs-xs); color: var(--c-error); }
+.field__error:empty { display: none; }
+
+/* Выбор возраста — плашки-переключатели */
+.age-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.age-option { position: relative; }
+.age-option input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.age-option span {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: var(--fs-md);
+  font-variant-numeric: tabular-nums;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.age-option:hover span { border-color: var(--c-accent); }
+.age-option input:checked + span { background: var(--c-accent); border-color: var(--c-accent); color: var(--c-on-accent); }
+.age-option input:focus-visible + span { outline: 2px solid var(--c-accent); outline-offset: 3px; }
+
+/* Согласие на обработку данных */
+.consent { display: flex; gap: 10px; align-items: flex-start; font-size: var(--fs-sm); color: var(--c-muted); cursor: pointer; }
+.consent input { width: 18px; height: 18px; margin-top: 2px; flex: none; accent-color: var(--c-accent); }
+
+.signup__trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.signup__submit:disabled { opacity: .6; cursor: progress; transform: none; box-shadow: none; }
+.signup__status { font-size: var(--fs-sm); color: var(--c-muted); }
+.signup__status:empty { display: none; }
+.signup__status a { color: var(--c-accent); font-weight: 600; }
+.signup__done .muted { margin-top: -6px; }
