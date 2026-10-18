@@ -9,7 +9,7 @@
    в Telegram-бота (инструкция в README.md, раздел «Форма записи»).
    Пока адрес пустой, форма откроется, но вместо отправки предложит
    написать в Telegram. */
-const SIGNUP_ENDPOINT = "";
+const SIGNUP_ENDPOINT = "https://sunrise-signup.ivansemenov06-12-03.workers.dev";
 
 (function () {
   "use strict";
