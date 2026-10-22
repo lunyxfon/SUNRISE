@@ -649,8 +649,15 @@ p { margin: 0; }
   font-family: var(--f-display);
   font-weight: 900;
   font-style: italic;
-  font-size: var(--fs-xl);
+  font-size: 1.5rem;
   text-transform: uppercase;
+}
+/* Сетка групп: три карточки на всю ширину */
+.groups-grid { grid-template-columns: 1fr; }
+@media (min-width: 760px) {
+  .groups-grid { grid-template-columns: repeat(3, 1fr); }
+  /* размер от ширины экрана, чтобы «Продолжающие» помещалось целиком */
+  .groups-grid .group__level { font-size: clamp(1rem, 0.2rem + 1.6vw, 1.7rem); }
 }
 .group ul { margin: 0; padding-left: 18px; color: var(--c-muted); font-size: var(--fs-sm); display: grid; gap: 4px; }
 
@@ -911,6 +918,51 @@ p { margin: 0; }
   color: var(--c-accent);
 }
 .step p { color: var(--c-muted); font-size: var(--fs-sm); }
+
+/* Плашка с кнопкой записи в конце шагов — занимает свободное место справа */
+.step--cta { counter-increment: none; grid-column: 1 / -1; align-self: start; padding-top: 0; border-top: 0; }
+.step--cta::before { content: none; }
+@media (min-width: 1100px) { .step--cta { grid-column: span 2; } }
+.step-cta {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 16px 20px 16px 24px;
+  background: var(--c-bg); /* секция «Как записаться» уже на фоне карточек */
+  border: 1px solid var(--c-line);
+  border-left: 0;
+}
+.step-cta::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--c-accent);
+}
+/* Заголовок того же размера, что у шагов */
+.step .step-cta__title {
+  font-family: var(--f-display);
+  font-weight: 800;
+  font-size: var(--fs-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--c-text);
+}
+.step .step-cta__title small {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--c-muted);
+}
+/* Кнопка компактнее обычной */
+.step-cta .btn { min-height: 44px; padding: 10px 18px; font-size: var(--fs-xs); }
 
 /* Контакты */
 .contacts { display: grid; gap: 28px; }
