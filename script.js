@@ -81,8 +81,14 @@ const SIGNUP_ENDPOINT = "https://sunrise-signup.ivansemenov06-12-03.workers.dev"
           const active = byId[entry.target.id];
           if (active) {
             active.classList.add("is-active");
-            // Прокручиваем панель, чтобы активная ссылка была видна на мобильных
-            active.scrollIntoView({ block: "nearest", inline: "center" });
+            // Прокручиваем саму панель по горизонтали, чтобы активная ссылка была видна
+            // на телефоне. Не scrollIntoView: он двигает и страницу и сбивает
+            // плавную прокрутку к направлению (приходилось нажимать дважды).
+            const list = active.parentElement.parentElement;
+            list.scrollTo({
+              left: active.offsetLeft - (list.clientWidth - active.offsetWidth) / 2,
+              behavior: "smooth",
+            });
           }
         });
       },
