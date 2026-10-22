@@ -37,7 +37,7 @@
     <!-- ===== Заголовок страницы ===== -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Галерея</p>
+       
         <h1 class="page-hero__title">Жизнь <span class="text-sunrise">студии</span></h1>
         <p class="lead">Концерты, тренировки и то, что остаётся за кулисами. Нажмите на фото, чтобы открыть его крупно.</p>
       </div>
@@ -47,11 +47,10 @@
       <div class="container">
         <!-- Фильтры по категориям (значение data-filter должно совпадать с data-cat у фото) -->
         <div class="filters" role="group" aria-label="Фильтр по категориям">
-          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Все</button>
-          <button class="filter-btn" type="button" data-filter="concerts" aria-pressed="false">Концерты</button>
-          <button class="filter-btn" type="button" data-filter="training" aria-pressed="false">Тренировки</button>
-          <button class="filter-btn" type="button" data-filter="backstage" aria-pressed="false">Backstage</button>
-          <button class="filter-btn" type="button" data-filter="team" aria-pressed="false">Команда</button>
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Все фото</button>
+          <button class="filter-btn" type="button" data-filter="concerts" aria-pressed="false">отчетные Концерты</button>
+          <button class="filter-btn" type="button" data-filter="training" aria-pressed="false">лайф</button>
+          <button class="filter-btn" type="button" data-filter="team" aria-pressed="false">Команды</button>
         </div>
 
         <!-- ЗАМЕНИТЬ: ваши фотографии.
@@ -63,51 +62,51 @@
              Чтобы добавить фото — скопируйте целиком блок <figure>...</figure>. -->
         <div class="gallery">
           <figure class="g-item" data-cat="concerts">
-            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 01</strong><span>images/gallery/01.jpg</span></div>
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концурт1.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Отчётный концерт, финал</b><span>Концерты</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="training">
-            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 02</strong><span>images/gallery/02.jpg</span></div>
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Тренировки.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Breaking, вечерняя группа</b><span>Тренировки</span></figcaption>
           </figure>
-          <figure class="g-item" data-cat="backstage">
-            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 03</strong><span>images/gallery/03.jpg</span></div>
+          <figure class="g-item" data-cat="concerts">
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концерт2.JPG" alt="Описание" loading="lazy"></div>
             <figcaption><b>Перед выходом на сцену</b><span>Backstage</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="team">
-            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 04</strong><span>images/gallery/04.jpg</span></div>
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/конкурсы_и_чемп.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Команда SUNRISE</b><span>Команда</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="concerts">
-            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 05</strong><span>images/gallery/05.jpg</span></div>
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концерты5.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Hip-Hop, постановка</b><span>Концерты</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="training">
-            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 06</strong><span>images/gallery/06.jpg</span></div>
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Тренировки4.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Разминка Kids</b><span>Тренировки</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="backstage">
-            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 07</strong><span>images/gallery/07.jpg</span></div>
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концерт3.JPG" alt="Описание" loading="lazy"></div>
             <figcaption><b>Грим и костюмы</b><span>Backstage</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="concerts">
-            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 08</strong><span>images/gallery/08.jpg</span></div>
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концерты6.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Dancehall на фестивале</b><span>Концерты</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="team">
-            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 09</strong><span>images/gallery/09.jpg</span></div>
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/конкурсы_и_чемп2.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Преподаватели студии</b><span>Команда</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="training">
-            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 10</strong><span>images/gallery/10.jpg</span></div>
+            <div class="ph ph--1x1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Тренировки3.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Popping, изоляции</b><span>Тренировки</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="concerts">
-            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 11</strong><span>images/gallery/11.jpg</span></div>
+            <div class="ph ph--4x5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Фото_концерты7.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Баттл 2×2</b><span>Концерты</span></figcaption>
           </figure>
           <figure class="g-item" data-cat="backstage">
-            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><strong>Фото 12</strong><span>images/gallery/12.jpg</span></div>
+            <div class="ph ph--16x9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><img src="img/Главное фото.jpg" alt="Описание" loading="lazy"></div>
             <figcaption><b>Репетиция в зале</b><span>Backstage</span></figcaption>
           </figure>
         </div>
